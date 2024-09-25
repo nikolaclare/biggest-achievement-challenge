@@ -9,6 +9,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
   </head>
   <style>
@@ -22,23 +24,54 @@
       --background-color: #F4F4F4;
     }
 
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--header-font);
+    }
+
+    a, button, p {
+      font-family: var(--body-font);
+      color: var(--text-color);
+    }
+
     header {
       background-color: var(--primary-color);
       padding: 50px;
       text-align: center;
       color: var(--secondary-color);
-      font-family: var(--header-font);
+    }
+
+    header button {
+      background-color: var(--accent-color);
+      padding: 10px 20px;
+      color: var(--text-color);
+      border-radius: 10px;
+      font-family: var(--body-font);
+      border: none;
     }
   </style>
 
   <body>
     <header>
-      <h1>Conquering the Great Victorian Rail Trail</h1>
-      <h2>A Solo Journey of Gravel Cycling and Bikepacking</h2>
-      <button>Read My Story</button>
+      <h1 class="m-5">Conquering the Great Victorian Rail Trail</h1>
+      <h2 class="lead">A Solo Journey of Gravel Cycling and Bikepacking</h2>
+      <button href="#journey" class="mt-3">Read My Story</button>
     </header>
     <main>
-
+      <section class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h3 class="text-success">
+              The Journey Begins
+            </h3>
+            <p>
+              Cycling has always been a passion, but last year I decided to push myself further. The Great Victorian Rail Trail was my longest ride, covering over 240 km across four days...
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="" alt="Cycling adventure" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
 
