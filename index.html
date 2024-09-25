@@ -17,18 +17,25 @@
     :root {
       --header-font: "Poppins", sans-serif;
       --body-font: "Roboto", sans-serif;
-      --primary-color: #2E8B57;
+      --primary-color: #198754;
       --secondary-color: #F5DEB3;
       --accent-color: #FFA500;
       --text-color: #333333;
       --background-color: #F4F4F4;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: var(--header-font);
     }
 
-    a, button, p {
+    a,
+    button,
+    p {
       font-family: var(--body-font);
       color: var(--text-color);
     }
@@ -49,6 +56,9 @@
       border: none;
     }
 
+    main {
+      background-color: var(--background-color);
+    }
   </style>
 
   <body>
@@ -65,11 +75,54 @@
               The Journey Begins
             </h3>
             <p>
-              Cycling has always been a passion, but last year I decided to push myself further. The Great Victorian Rail Trail was my longest ride, covering over 240 km across four days...
+              Cycling has always been a passion, but last year I decided to push myself further. The Great Victorian
+              Rail Trail was my longest ride, covering over 240 km across four days...
             </p>
           </div>
           <div class="col-md-6">
             <img src="Trawool-first-stop.jpeg" alt="Cycling adventure" class="img-fluid img-thumbnail rounded shadow">
+          </div>
+        </div>
+      </section>
+      <section id="journey" class="py-5">
+        <div class="container">
+          <h4 class="text-center text-success mb-5">The Journey: Day-By-Day</h4>
+          <div class="row mb-4">
+            <div class="col-md-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-success">Day 1: Tallarook to Molesworth - 55km</h5>
+                  <p>The excitement of starting the journey and pushing through the first day of gravel and trails...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-success">Day 2: Molesworth to Mansfield - 66km</h5>
+                  <p>A long stretch with some challenging climbs and beautiful views along the way...</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-success">Day 3: Mansfield to Yea - 83km</h5>
+                  <p>This was the toughest day, but also the most rewarding, reaching the longest distance...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-success">Day 4: Yea to Tallarook - 39km</h5>
+                  <p>The final stretch...</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
