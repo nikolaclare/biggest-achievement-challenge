@@ -37,6 +37,25 @@
       color: var(--text-color);
     }
 
+    nav {
+      background-color: var(--text-color);
+    }
+
+    nav .navbar-brand,
+    .nav-link {
+      color: var(--primary-color);
+      font-family: var(--body-font);
+    }
+
+    nav .navbar-brand:hover,
+    .nav-link:hover {
+      color: var(--accent-color);
+    }
+
+    button.navbar-toggler {
+      background-color: var(--accent-color);
+    }
+
     h1,
     h2,
     h3,
@@ -61,11 +80,12 @@
       background-color: var(--accent-color);
       padding: 10px 20px;
       color: var(--text-color);
-      border-radius: 10px;
+      border-radius: 50px;
       font-family: var(--body-font);
       border: none;
       text-decoration: none;
       margin-bottom: 60px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     header .btn:hover {
@@ -104,9 +124,47 @@
       color: var(--accent-color);
     }
 
+    #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 14px;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #backToTopBtn:hover {
+      background-color: var(--text-color);
+      color: var(--accent-color);
+    }
   </style>
 
   <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Biggest Achievement</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#beginning">The Journey Begins</a>
+            <a class="nav-link" href="#journey">The Journey: Day-By-Day</a>
+            <a class="nav-link" href="#highlights">Highlight Moments</a>
+            <a class="nav-link" href="#repeat">Riding Again</a>
+            <a class="nav-link" href="#about">About me</a>
+          </div>
+        </div>
+      </div>
+    </nav>
     <header>
       <div class="row align-items-center">
         <div class="col-md-6">
@@ -120,7 +178,7 @@
       </div>
     </header>
     <main>
-      <section class="container py-5">
+      <section class="container py-5" id="beginning">
         <div class="row align-items-center">
           <div class="col-md-6">
             <h3 class="text-success mb-4">
@@ -191,7 +249,8 @@
                   <p>
                     Art installations dotted the trail, celebrating the region’s culture and history, and the trail
                     crossed several small
-                    streams, allowing for refreshing breaks. After surviving a stretch that was home to a particularly aggressive magpie, I finally
+                    streams, allowing for refreshing breaks. After surviving a stretch that was home to a particularly
+                    aggressive magpie, I finally
                     reached Mansfield. Though sore and exhausted, a shower, massage, and hearty pub meal rejuvenated me,
                     leaving me ready
                     for the next leg of the journey.
@@ -262,7 +321,7 @@
         </div>
 
       </section>
-      <section class="container py-5">
+      <section class="container py-5" id="highlights">
         <h3 class="text-center text-success mb-5">
           Highlight Moments
         </h3>
@@ -329,9 +388,10 @@
 
         </div>
       </section>
-      <section class="container py-5">
+      <section class="container py-5" id="repeat">
         <h3 class="text-success mb-5">Riding Again: A Birthday Celebration with Friends</h3>
-        <p>After the incredible solo journey last year, I’ve decided to celebrate my birthday next year by cycling the Great
+        <p>After the incredible solo journey last year, I’ve decided to celebrate my birthday next year by cycling the
+          Great
           Victorian Rail
           Trail again—this time with friends. We’ll kick things off by catching the train from
           Southern Cross to Tallarook, then cycle 40 km to Yea on the first day.
@@ -351,7 +411,7 @@
       </section>
     </main>
     <footer>
-      <section class="grid">
+      <section class="grid" id="about">
         <div>
           <h5>About this website »</h5>
           <p>This project is a responsive landing page built with HTML, CSS, and Bootstrap, created for the Biggest
@@ -383,7 +443,28 @@
         </div>
       </section>
     </footer>
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">Back to top</button>
+    <script>
+      var backToTopBtn = document.getElementById("backToTopBtn");
 
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      }
+
+      function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
   </body>
 
 </html>
