@@ -154,11 +154,11 @@
 
     footer a {
       text-decoration: none;
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     footer a:hover {
-      color: var(--accent-color);
+      color: var(--primary-color);
     }
 
     footer p {
@@ -209,8 +209,27 @@
         display: none;
       }
 
+      #journey .day-1,
+      .day-3 {
+        margin-bottom: 50px;
+      }
+
+      #beginning p,
+      .highlights,
+      #repeat p {
+        padding: 0 20px;
+      }
+
+      #journey .card-img-top {
+        min-height: 200px;
+      }
+
+      #highlights .card-img-top {
+        min-height: 300px;
+      }
+
       footer {
-        padding: 20px;
+        padding: 20px 20px 60px 20px;
       }
 
       footer .grid {
@@ -289,7 +308,7 @@
         <div class="container">
           <h3 class="text-center text-success mb-5">The Journey: Day-By-Day</h3>
           <div class="row m-5">
-            <div class="col-md-6">
+            <div class="col-md-6 day-1">
               <div class="card h-100">
                 <img src="Cheviot Tunnel.jpg" class="card-img-top img-fluid" alt="Cheviot Tunnel">
                 <div class="card-body">
@@ -311,7 +330,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 day-2">
               <div class="card h-100">
                 <img src="responding artwork.jpg" class="card-img-top img-fluid"
                   alt="Artwork - Responding by Robbie Rowlands">
@@ -337,7 +356,7 @@
             </div>
           </div>
           <div class="row m-5">
-            <div class="col-md-6">
+            <div class="col-md-6 day-3">
               <div class="card h-100">
                 <img src="valley.webp" class="card-img-top img-fluid"
                   alt="Gravel rail trail heading into Cheviot Tunnel">
@@ -366,8 +385,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="col-md-6">
+            <div class="col-md-6 day-4">
               <div class="card h-100">
                 <img src="trawool valley.jpg" class="card-img-top img-fluid" alt="Trawool landscape">
                 <div class="card-body">
@@ -404,7 +422,8 @@
           Highlight Moments
         </h3>
         <h4 class="text-center">Why the Great Victorian Rail&nbsp;Trail?</h4>
-        <p class="pb-5">The GVRT is more than just a long ride—it’s a journey through some of Victoria's most beautiful
+        <p class="pb-5 highlights">The GVRT is more than just a long ride—it’s a journey through some of Victoria's most
+          beautiful
           landscapes,
           enriched
           with art and culture. This trail became my perfect escape and the start of my path to rediscovering joy after
